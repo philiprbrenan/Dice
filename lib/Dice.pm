@@ -11,7 +11,6 @@ use strict;
 use Carp;
 use Data::Dump qw(dump);
 use Data::Table::Text qw(:all);
-use Test::More qw(no_plan);
 
 #D1 Dice                                                                        # Throw several dice and analyze the results.
 
@@ -360,7 +359,7 @@ under the same terms as Perl itself.
 
 =cut
 
-
+1;
 
 # Tests and documentation
 
