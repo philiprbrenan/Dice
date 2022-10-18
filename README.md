@@ -1,12 +1,12 @@
-#Name
+#Name#
 
-Dice - Throw some dice and analyze the results
+__Dice__ - Throw some dice and analyze the results
 
-#Synopsis
+#Synopsis#
 
 Dice - Throw a specified number of dice with a specified number of dots on them and analyze the results looking for the most dice showing the same value and for the longest consecutive sequence.
 
-#Description
+#Description#
 
 Throw some dice and analyze the results
 
@@ -14,7 +14,7 @@ Version "20221018".
 
 The following sections describe the methods in each functional area of this [module](https://en.wikipedia.org/wiki/Modular_programming). For an alphabetic listing of all methods by name see Index.
 
-##Dice
+##Dice##
 Throw several dice and analyze the results.
 
 ```
@@ -28,7 +28,7 @@ Create a new dice ready to throw.
   2  $dots      Optional number of dots on the dice
 ```
 
-###Example:
+###Example:###
 
 ```
     my $d = Dice::new(10, 6);  # 𝗘𝘅𝗮𝗺𝗽𝗹𝗲
@@ -50,7 +50,7 @@ Create a new dice ready to throw.
   }
 ```
 
-##throw($dice)
+##throw($dice)###
 
 Perform a throw of the dice.
 
@@ -59,7 +59,7 @@ Perform a throw of the dice.
   1  $dice      Dice thrower
 ```
 
-###Example:
+###Example:###
 
 ```
     my $d = Dice::new(10, 6);
@@ -70,7 +70,7 @@ Perform a throw of the dice.
   }
 ```
 
-##fix($dice, @values)
+##fix($dice, @values)###
 
 Perform a fixed throw of the dice - useful for testing because we use a random number generator to perform the actual throw.
 
@@ -79,7 +79,8 @@ Perform a fixed throw of the dice - useful for testing because we use a random n
   1  $dice      Dice thrower
   2  @values    Values of dice
 ```
-###Example:
+
+###Example:###
 
 ```
     my $d = Dice::new(10, 6);
@@ -100,7 +101,7 @@ Perform a fixed throw of the dice - useful for testing because we use a random n
   }
 ```
 
-##analyze($dice)
+##analyze($dice)##
 
 Analyze the result of the last throw. Indicate whether several dice show the same value and on the length of the longest consecutive sequence.
 
@@ -108,7 +109,7 @@ Analyze the result of the last throw. Indicate whether several dice show the sam
      Parameter  Description
   1  $dice      Dice thrower
 ```
-###Example:
+###Example:###
 
 ```
     my $d = Dice::new(10, 6);
@@ -129,28 +130,29 @@ Analyze the result of the last throw. Indicate whether several dice show the sam
   }
 ```
 
-##Hash Definitions
-###Dice Definition
-####Dice object
+##Hash Definitions##
+###Dice Definition###
+####Dice object####
 
-#####Output fields
-######analysis
+#####Output fields#####
+__analysis__
 Analysis of last throw
 
-######dots
+__dots__
 Number of dots on dice
 
-######number
+__number__
 Number of dice
 
-######result
+__result__
 Last throw result
 
-######throws
+__throws__
 Number of throws
 
-####Private Methods
-#####numberToWord($number)
+##Private Methods##
+
+###numberToWord($number)###
 
 Convert a number in the range 0..10 to a [word](https://en.wikipedia.org/wiki/Doc_(computing)) else return the number as is
 ```
