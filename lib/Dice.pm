@@ -72,7 +72,7 @@ sub analyze($)                                                                  
  {my ($dice) = @_;                                                              # Dice thrower
   @_ == 1 or confess "One parameter required\n";
 
-  my @m;                                                                        # Things we would liek to tellt he suer about their dice throw
+  my @m;                                                                        # Things we would like to tell the user about their dice throw
 
   if (1)                                                                        # Check for several of a kind
    {my %c;                                                                      # Counts
