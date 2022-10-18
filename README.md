@@ -182,15 +182,11 @@ Convert a number in the range 0..10 to a [word](https://en.wikipedia.org/wiki/Do
 5 throw - Perform a throw of the dice.
 
 # Installation
-This [module](https://en.wikipedia.org/wiki/Modular_programming) is written in 100% Pure Perl and, thus, it is easy to read, comprehend, use, modify and [install](https://en.wikipedia.org/wiki/Installation_(computer_programs)) via [CPAN](https://metacpan.org/author/PRBRENAN): ```
-  sudo cpan install Dice
-Author
-philiprbrenan@gmail.com
-
-http://www.appaapps.com
+This [module](https://en.wikipedia.org/wiki/Modular_programming) is written in 100% Pure Perl and, thus, it is easy to read, comprehend, use, modify and [install](https://en.wikipedia.org/wiki/Installation_(computer_programs)) via [CPAN](https://metacpan.org/author/PRBRENAN): 
 ```
-# Copyright
+  sudo cpan install Dice
+```
 
-Copyright (c) 2016-2022 Philip R Brenan.
+# Copyright
 
 This [module](https://en.wikipedia.org/wiki/Modular_programming) is free software. It may be used, redistributed and/or modified under the same terms as Perl itself.
