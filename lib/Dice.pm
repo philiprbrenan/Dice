@@ -1,7 +1,7 @@
 #!/usr/bin/perl
 #-------------------------------------------------------------------------------
 # Throw several dice and analyze the results
-# Philip R Brenan at BroadBean Inc., 2022
+# Philip R Brenan at gmail dit com, 2022
 #-------------------------------------------------------------------------------
 # podDocumentation
 package Dice;
