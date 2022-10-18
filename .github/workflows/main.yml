@@ -1,4 +1,4 @@
-# Test Dice 2022-10-18 at 18:52:54
+# Test Dice 2022-10-18 at 18:59:23
 
 name: Test
 
@@ -26,6 +26,11 @@ jobs:
     - name: Test
       run: |
         perl  -Ilib lib/Dice.pm
-        prove -Ilib t/
-        echo 'perl -Ilib -M"Dice" -e"say STDERR Dice::new(6, 6)->throw()->analyze()->analysis;"'
-        perl       -Ilib -M"Dice" -e"say STDERR Dice::new(6, 6)->throw()->analyze()->analysis;"
+
+    - name: Prove
+      run: |
+        perl  -Ilib lib/Dice.pm
+
+    - name: perl       -Ilib -M"Dice" -e"my $d = Dice::new(6, 6)->throw()->analyze(); say STDERR join ' ', $d->result->@*; say STDERR $d->analysis"
+      run: |
+        perl -Ilib -M"Dice" -e"my $d = Dice::new(6, 6)->throw()->analyze(); say STDERR join ' ', $d->result->@*; say STDERR $d->analysis"
