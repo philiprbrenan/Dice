@@ -1,3 +1,5 @@
+![Test](https://github.com/philiprbrenan/Dice/workflows/Test/badge.svg)
+
 # Name
 
 __Dice__ - Throw some dice and analyze the results
