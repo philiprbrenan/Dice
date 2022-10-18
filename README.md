@@ -17,7 +17,8 @@ The following sections describe the methods in each functional area of this [mod
 ##Dice
 Throw several dice and analyze the results.
 
-```new($dice, $dots)
+```
+new($dice, $dots)
 ```
 Create a new dice ready to throw.
 
@@ -27,7 +28,8 @@ Create a new dice ready to throw.
   2  $dots      Optional number of dots on the dice
 ```
 
-Example:
+###Example:
+
 ```
     my $d = Dice::new(10, 6);  # 𝗘𝘅𝗮𝗺𝗽𝗹𝗲
 
@@ -51,11 +53,14 @@ Example:
 ##throw($dice)
 
 Perform a throw of the dice.
+
 ```
      Parameter  Description
   1  $dice      Dice thrower
 ```
-#Example:
+
+###Example:
+
 ```
     my $d = Dice::new(10, 6);
 
@@ -68,12 +73,14 @@ Perform a throw of the dice.
 ##fix($dice, @values)
 
 Perform a fixed throw of the dice - useful for testing because we use a random number generator to perform the actual throw.
+
 ```
      Parameter  Description
   1  $dice      Dice thrower
   2  @values    Values of dice
 ```
 ###Example:
+
 ```
     my $d = Dice::new(10, 6);
 
@@ -96,12 +103,14 @@ Perform a fixed throw of the dice - useful for testing because we use a random n
 ##analyze($dice)
 
 Analyze the result of the last throw. Indicate whether several dice show the same value and on the length of the longest consecutive sequence.
+
 ```
      Parameter  Description
   1  $dice      Dice thrower
 ```
 ###Example:
 
+```
     my $d = Dice::new(10, 6);
        $d->fix(qw(4 2 6 4 3 6 1 4 4 6));
 
@@ -118,26 +127,26 @@ Analyze the result of the last throw. Indicate whether several dice show the sam
        $d->throw();
     ok $d->result->@* == 10;
   }
-
+```
 
 ##Hash Definitions
 ###Dice Definition
 ####Dice object
 
 #####Output fields
-analysis
+######analysis
 Analysis of last throw
 
-dots
+######dots
 Number of dots on dice
 
-number
+######number
 Number of dice
 
-result
+######result
 Last throw result
 
-throws
+######throws
 Number of throws
 
 ####Private Methods
