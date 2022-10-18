@@ -1,4 +1,4 @@
-# Test Dice 2022-10-18 at 18:45:53
+# Test Dice 2022-10-18 at 18:47:18
 
 name: Test
 
@@ -31,3 +31,4 @@ jobs:
       run: |
         perl  -Ilib lib/Dice.pm
         prove -Ilib t/
+        perl -Ilib -M"Dice" -e"say STDERR Dice::new(6, 6)->throw()->analyze()->analysis;"
