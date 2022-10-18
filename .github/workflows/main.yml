@@ -1,4 +1,4 @@
-# Test Dice 2022-10-18 at 18:21:55
+# Test Dice 2022-10-18 at 18:23:31
 
 name: Test
 
@@ -29,5 +29,5 @@ jobs:
 
     - name: Test
       run: |
-        perl lib/Dice.pm
+        perl  -Ilib  lib/Dice.pm
         prove -Ilib t/
