@@ -13,7 +13,7 @@ Dice - Throw a specified number of dice with a specified number of dots on them 
 For example:
 
 ```
-perl       -Ilib -M"Dice" -e"my \$d = Dice::new(6, 6)->throw()->analyze(); say STDERR join ' ', \$d->result->@*; say STDERR \$d->analysis"
+perl -Ilib -M"Dice" -e"my \$d = Dice::new(6, 6)->throw()->analyze(); say STDERR join ' ', \$d->result->@*; say STDERR \$d->analysis"
 ```
 
 produces:
