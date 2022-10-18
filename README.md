@@ -10,11 +10,13 @@ Dice - Throw a specified number of dice with a specified number of dots on them 
 
 # Description
 
-Throw some dice and analyze the results
+For example:
+```
+perl -Ilib -M"Dice" -e"say STDERR Dice::new(6, 6)->throw()->analyze()->analysis;"
 
-Version "20221018".
-
-The following sections describe the methods in each functional area of this [module](https://en.wikipedia.org/wiki/Modular_programming). For an alphabetic listing of all methods by name see Index.
+Three of a kind
+Two in a row from three to four
+```
 
 ## Dice
 Throw several dice and analyze the results.
