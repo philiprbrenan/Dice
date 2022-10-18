@@ -13,13 +13,15 @@ Dice - Throw a specified number of dice with a specified number of dots on them 
 For example:
 
 ```
-  perl -Ilib -M"Dice" -e"say STDERR Dice::new(6, 6)->throw()->analyze()->analysis;"
+perl       -Ilib -M"Dice" -e"my \$d = Dice::new(6, 6)->throw()->analyze(); say STDERR join ' ', \$d->result->@*; say STDERR \$d->analysis"
 ```
+
 produces:
 
 ```
-  Three of a kind
-  Two in a row from three to four
+3 1 4 1 1 2
+Three of a kind
+Four in a row from one to four
 ```
 
 ## Dice
