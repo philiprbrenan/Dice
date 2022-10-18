@@ -38,7 +38,7 @@ sub throw($)                                                                    
   my $n = $dice->number;                                                        # Number if dice
 
   $dice->result = [];
-  push $dice->result->@*, rand($d)+1 for 1..$n;                                 # Throws
+  push $dice->result->@*, int(rand($d)+1) for 1..$n;                                 # Throws
   $dice->throws++;                                                              # Increment number of throws
   $dice                                                                         # Chain
  }
@@ -177,7 +177,7 @@ Create a new dice ready to throw.
 B<Example:>
 
 
-  
+
     my $d = Dice::new(10, 6);  # 𝗘𝘅𝗮𝗺𝗽𝗹𝗲
 
        $d->fix(qw(4 2 6 4 3 6 1 4 4 6));
@@ -187,16 +187,16 @@ B<Example:>
   Four in a row from one to four
   END
   }
-  
-  if (1) {                                                                        
-  
+
+  if (1) {
+
     my $d = Dice::new(10, 6);  # 𝗘𝘅𝗮𝗺𝗽𝗹𝗲
 
        $d->throw();
     ok $d->result->@* == 10;
   }
-  
-  
+
+
 
 =head2 throw($dice)
 
@@ -209,13 +209,13 @@ B<Example:>
 
 
     my $d = Dice::new(10, 6);
-  
+
        $d->throw();  # 𝗘𝘅𝗮𝗺𝗽𝗹𝗲
 
     ok $d->result->@* == 10;
   }
-  
-  
+
+
 
 =head2 fix($dice, @values)
 
@@ -229,7 +229,7 @@ B<Example:>
 
 
     my $d = Dice::new(10, 6);
-  
+
        $d->fix(qw(4 2 6 4 3 6 1 4 4 6));  # 𝗘𝘅𝗮𝗺𝗽𝗹𝗲
 
        $d->analyze;
@@ -238,14 +238,14 @@ B<Example:>
   Four in a row from one to four
   END
   }
-  
-  if (1) {                                                                        
+
+  if (1) {
     my $d = Dice::new(10, 6);
        $d->throw();
     ok $d->result->@* == 10;
   }
-  
-  
+
+
 
 =head2 analyze($dice)
 
@@ -259,7 +259,7 @@ B<Example:>
 
     my $d = Dice::new(10, 6);
        $d->fix(qw(4 2 6 4 3 6 1 4 4 6));
-  
+
        $d->analyze;  # 𝗘𝘅𝗮𝗺𝗽𝗹𝗲
 
     is_deeply $d->analysis, <<END;
@@ -267,14 +267,14 @@ B<Example:>
   Four in a row from one to four
   END
   }
-  
-  if (1) {                                                                        
+
+  if (1) {
     my $d = Dice::new(10, 6);
        $d->throw();
     ok $d->result->@* == 10;
   }
-  
-  
+
+
 
 
 =head1 Hash Definitions
