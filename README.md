@@ -11,11 +11,12 @@ Dice - Throw a specified number of dice with a specified number of dots on them 
 # Description
 
 For example:
-```
-perl -Ilib -M"Dice" -e"say STDERR Dice::new(6, 6)->throw()->analyze()->analysis;"
 
-Three of a kind
-Two in a row from three to four
+```
+  perl -Ilib -M"Dice" -e"say STDERR Dice::new(6, 6)->throw()->analyze()->analysis;"
+
+  Three of a kind
+  Two in a row from three to four
 ```
 
 ## Dice
