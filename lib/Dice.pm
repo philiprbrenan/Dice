@@ -9,7 +9,6 @@ our $VERSION = "20221018";
 use warnings FATAL => qw(all);
 use strict;
 use Carp;
-use Data::Dump qw(dump);
 use Data::Table::Text qw(:all);
 
 #D1 Dice                                                                        # Throw several dice and analyze the results.
