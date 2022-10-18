@@ -1,4 +1,4 @@
-# Test Dice 2022-10-18 at 18:50:18
+# Test Dice 2022-10-18 at 18:51:23
 
 name: Test
 
@@ -19,17 +19,9 @@ jobs:
         cp -R DataTableText-main/* .
         tree
 
-    - name: Install Test::Most
-      run: |
-        sudo cpan install -T Test::Most
-
-    - name: Install Data::Dump
-      run: |
-        sudo cpan install -T Data::Dump
-
     - name: Test
       run: |
         perl  -Ilib lib/Dice.pm
         prove -Ilib t/
         echo 'perl -Ilib -M"Dice" -e"say STDERR Dice::new(6, 6)->throw()->analyze()->analysis;"'
-        perl -Ilib -M"Dice" -e"say STDERR Dice::new(6, 6)->throw()->analyze()->analysis;"
+        perl       -Ilib -M"Dice" -e"say STDERR Dice::new(6, 6)->throw()->analyze()->analysis;"
