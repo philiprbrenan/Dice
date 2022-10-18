@@ -14,6 +14,9 @@ For example:
 
 ```
   perl -Ilib -M"Dice" -e"say STDERR Dice::new(6, 6)->throw()->analyze()->analysis;"
+```
+produces:
+```
 
   Three of a kind
   Two in a row from three to four
